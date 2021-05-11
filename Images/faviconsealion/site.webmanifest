@@ -1,0 +1,14 @@
+{
+    "name": "Sea Lion",
+    "short_name": "Sea Lion",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#7bbecc",
+    "background_color": "#7bbecc",
+    "display": "standalone"
+}

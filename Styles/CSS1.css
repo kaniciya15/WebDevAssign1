@@ -1,0 +1,178 @@
+/*sea lion styling 1*/
+body{
+background-color: rgb(109, 114, 114);
+}
+h2,h3,p{
+    font-family:monospace;
+    font-size: large;
+   
+}
+p{
+    color:rgb(12, 12, 12);
+    font-weight: bold;
+    font-size: larger;
+}
+h2,h3{
+    color: rgb(39, 0, 130);
+}
+h1{
+    color: cornsilk;
+}
+.head{
+    text-align: center;
+}
+#slContainer{
+     display: flex;
+     flex-flow: row wrap;
+     background-color: rgba(165, 165, 158, 0.315);
+     padding: 5px;  
+}
+#slContainer .box{
+  margin: .10em .4em;
+  
+  box-sizing:border-box;
+  box-shadow: 0 10px 30px rgba(86, 79, 182, 0.3),0 15px 12px rgba(104, 94, 192, 0.22);
+  background-color: rgba(155, 226, 223, 0.658);
+
+}
+header{
+  overflow: hidden;
+  padding: 1em;
+  background-image:linear-gradient(rgba(123, 133, 143, 0.658), rgba(81, 151, 231, 0.637));  
+  background-repeat:round;
+}
+.sl a{
+    background-color:#FFF;
+    color:#3474b0;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  .sl a:hover{
+    background-color:#3474b0;
+    color: #FFF;
+  }
+/*image styling*/
+#slhero{
+    width: 100%;
+    height: auto;
+    border-radius: 200px;
+}
+section img{
+    width: 100%;
+    height: 100px;
+    border-radius:8px;
+    border: cornflowerblue solid 2px;
+}
+/*main nav styling* is same for both*/
+#slNav{
+    position: sticky;
+    top: 0;
+}
+#slNav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: rgba(71, 73, 73, 0.39);
+    flex-flow:  row wrap;
+ }
+ #slNav li{
+    flex-grow: 1;
+    border:0.02em rgba(157, 169, 224, 0.788) solid;
+    background-color: rgb(92, 140, 230);
+        
+ }
+.active{
+    background-color: rgba(0, 47, 255, 0.377);
+}
+#slNav a:hover{
+    background-color: #62dbdb;
+    color: #FFF;
+}
+
+#slNav a {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position:center;
+    min-height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    display: block;
+    color:rgb(17,17,17);
+    text-align: center;
+}
+  
+  /*footer styling*/
+  footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  footer a{
+    text-decoration: none;
+    color: #277e3a;
+    line-height: 1.7;
+  }
+  footer{
+    background-color:rgb(33, 34, 88);
+    padding: 1em;
+}
+
+#slContainer .box {
+    background-image:url(../Images/sealion1.svg),linear-gradient(lightblue,rgb(57, 58, 158));
+    background-repeat: no-repeat;
+    background-origin:padding-box;
+    border: 10px dashed rgb(90, 89, 168);
+    padding: 5px;
+    background-size:50px 50px,100% 100% ;
+    align-self:center;
+    margin: 5px;
+    }
+#slHeader img{
+        width: 100px;
+        height: 100px;
+        transition-duration: 10s;
+        transform: skew(180deg,0deg);
+}
+/*desktop styling*/
+@media only screen and (min-width:800px){
+#slNav a{
+    display:block;
+}
+#slNav ul{
+  justify-content:center;
+}
+#slNav li{
+    width: 100px;
+    flex-grow: 0;
+}
+/*image*/
+section img{
+    width: 70%;
+    height: 100px;
+    border-radius: 8px;
+}
+
+#slContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr ;
+    grid-column-gap:20px; 
+}
+header{
+    overflow: hidden;
+    padding: 1em;
+    background-image:linear-gradient(rgba(123, 133, 143, 0.637), rgba(81, 151, 231, 0.568)); 
+     background-repeat: round;
+  }
+  #slContainer .box {
+    background-image:url(../Images/sealion1.svg),linear-gradient(lightblue,rgb(57, 58, 158));
+    background-repeat: no-repeat;
+    background-origin:padding-box;
+    border: 30px dashed rgb(90, 89, 168);
+    padding: 50px 30px 50px 30px;
+    background-size:50px 50px,100% 100% ;
+    align-self:center;
+    margin: 40px 80px 40px 80px;
+}
+}
