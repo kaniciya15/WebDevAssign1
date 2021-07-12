@@ -1,0 +1,426 @@
+.container img{
+    border-radius: 8px;
+   align-self: center;
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;   
+    border: none;
+    
+
+}
+
+
+.button {
+    
+    color: rgb(236, 241, 236);
+    background-color:gray;
+    padding: 5px ;
+    text-decoration: none;
+    font-size: 10px;
+   
+}
+#mainForm{
+    font-family: cursive;
+    font-style: italic;
+    
+}
+label{
+    display:inline-block;
+}
+
+
+/*animal&bird&plants*/
+
+#animalContainer .container,#birdsContainer .container{
+    margin: .8em .2em;
+   
+    box-sizing:border-box;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30),0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 20px;
+    text-align: center;
+    background-size: 45px 45px;
+    
+    
+    
+}
+#animalContainer h3, #animalContainer p,#birdsContainer h3, #birdsContainer p{
+    width: 90%;
+    padding: 0;
+    margin: 1em auto;
+    font-size: large;
+    font-style: oblique;
+    color: rgb(12, 24, 21);
+}
+#animalContainer p,#birdsContainer p{
+    color: rgb(177, 235, 185);
+}
+#animalContainer, #birdsContainer{
+    display:flex;
+    flex-flow:row wrap;
+    }
+
+.animals,.plants,.birds{
+        background-image:linear-gradient(rgba(74, 170, 87, 0.808) ,rgba(210, 218, 102, 0.767),rgba(12, 78, 12, 0.795));
+    }
+    
+.birds ,.animals  ,.plants {
+         
+         font-size:x-large;
+         border: rgb(17,17,17) 1px;
+         text-align: center;
+         padding: 20px 20px;
+         margin: 20px 100px 20px 100px;
+         border-radius: 40px;
+    }
+.container{
+background-image:linear-gradient(rgba(0, 128, 0, 0.247),rgba(0, 0, 255, 0.212));
+border: 5px rgba(206, 201, 201, 0.651)  groove ;
+    }
+    .animal p,.plant p,.bird p{
+        color: rgb(70, 68, 68);
+        text-align: center;
+        background: rgba(25, 151, 57, 0.493);
+        font-size:large;
+        margin: 10px 10px 10px 10px;
+    }
+    
+/*table styling*/
+table{
+    width: 100%;
+}
+thead{
+    table-layout:fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border:3px solid black;
+    max-width: 600px;
+    
+}
+th{
+    letter-spacing: 2px;
+    color: rgb(53, 51, 51);
+    font-size: medium;
+
+}
+td{
+    letter-spacing: 1px;
+    text-align:center;
+    color: rgb(240, 247, 242);
+    font-size:medium;
+}
+tfoot td{
+    text-align:center;
+}
+thead,tfoot{
+    background: rgba(63, 238, 40, 0.671);
+    color: rgb(7, 7, 7);
+    text-shadow: 1px 1px 1px black;
+}
+tr:nth-child(even){
+    background: rgba(24, 158, 53, 0.795);
+}
+
+/*activity table*/
+.tableact{
+    width: 80%;
+}
+.tableact{
+    font-size: large;
+    background-color: rgba(103, 160, 197, 0.589);
+}
+.tableact tr{
+    background: rgba(184, 194, 188, 0.507);
+}
+.tableact tfoot{
+    background-color: rgba(103, 160, 197, 0.658);
+}
+/*activity page*/
+
+#activityContainer iframe{
+    width: 200px;
+    height: 150px;
+    border:5px solid gray;
+    
+}
+
+#activityContainer{
+    display:flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   
+}
+.act1 img{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    
+}
+.act2 img {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    
+}
+.act3 img{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    
+}
+
+#activityContainer .act1{
+    background-image:url(../Images/sealion.svg),linear-gradient(rgba(52, 52, 219, 0.363),rgba(173, 216, 230, 0.288));
+    background-repeat: no-repeat;
+    background-origin:padding-box;
+    border: 10px double rgb(125, 179, 201);
+    padding: 25px;
+    background-size:50px 50px,100% 100%;
+    color: rgb(176, 240, 185);
+    border-radius: 20px;
+    
+ 
+}
+#activityContainer .act2{
+    background-image:url(../Images/elephanta.svg),linear-gradient(rgba(53, 20, 20, 0.397),rgba(236, 236, 48, 0.397));
+    background-repeat: no-repeat;
+    background-origin:padding-box;
+    border: 10px double rgb(121, 94, 68);
+    padding: 25px;
+    background-size:50px 50px,100% 100% ;
+    color: rgb(176, 240, 185);
+    border-radius: 20px;
+ 
+}
+#activityContainer .act3{
+    background-image: url(../Images/nighta.svg),linear-gradient(rgba(192, 192, 192, 0.301),rgba(0, 0, 0, 0.342));
+    background-repeat: no-repeat;
+    background-origin:padding-box;
+    border: 10px double  rgb(132, 138, 132);
+    padding: 25px;
+    background-size:50px 50px,100% 100% ;
+    color: rgb(176, 240, 185);
+    border-radius: 20px;
+
+}
+
+
+/*purchase and donate*/
+:root {
+    --border:solid rgb(11, 65, 40);
+    --main-light-colour:rgb(192, 184, 184);
+    --myPadding:5px;
+    --margin:10px;
+    --textcolour:rgb(19, 18, 18);
+  }
+  .pd {
+    color: var(--main-light-colour);
+    background-image: linear-gradient(rgba(22, 160, 22, 0.658),rgba(128, 0, 128, 0.582));
+    padding: var(--myPadding);
+    margin: var(--margin);
+    color : var(--textcolour); 
+   
+    border-radius: 20px;
+  }
+
+  /*form styling*/
+#mainForm{
+    background-image: linear-gradient(rgba(22, 160, 22, 0.486),rgba(128, 0, 128, 0.582));
+}  
+
+ input[type=submit],input[type=reset] {
+      background-color: rgba(116, 119, 121, 0.644);
+      border-radius: 4px;
+      border: none;
+      padding: 4px;
+  }
+input[type=submit]:hover,input[type=reset]:hover{
+    background-color: rgb(148, 196, 193);
+}
+
+input[type=text],input[type=number],input[type=email],select,textarea{
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding:2px;
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: lightgray;
+    
+}
+legend{
+    background-color: #ccc;
+    color: white;
+    padding: 5px 10px;
+    align-items: center;
+}
+fieldset{
+    width:auto;
+    background-image:linear-gradient(rgba(149, 211, 149, 0.637),rgba(208, 151, 216, 0.726)); 
+   
+}
+/*contactus page*/
+.convideo{
+    width:350px ;
+    height:150px ;
+}
+#contactContainer .cbox{
+    display:flex;
+   flex-flow: row wrap;
+  justify-content: center;
+}
+.cbox{
+    background-image:repeating-radial-gradient( rgb(205, 211, 203),rgb(79, 141, 73),rgb(114, 112, 113));
+    margin: .8em .2em;
+    
+    box-sizing:border-box;
+    box-shadow: 0 19px 38px rgba(33, 95, 8, 0.3),0 15px 12px rgba(14, 136, 14, 0.22);
+    border-radius: 10px;
+    color: rgb(15, 88, 34);
+    
+}
+/*homepage*/
+#homeContainer img{
+    border-radius: 15px;
+    justify-content: center;
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
+    border: rgb(141, 153, 152) groove 10px;
+
+}
+
+#output {
+    min-height: 50px;
+    width:auto;
+    border: 1px solid black;  
+  }
+#output1 {
+    min-height: 50px;
+    width:auto;
+    border: 1px solid black;  
+  }
+  #output2 {
+    min-height: 50px;
+    width:auto;
+    border: 1px solid black;  
+  } 
+@media only screen and (min-width:800px){
+    #animalContainer, #birdsContainer{
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        grid-template-rows: auto;
+        grid-column-gap:20px;
+        
+    }
+    #contactContainer {
+     display: grid;
+     grid-template-columns: auto;
+     grid-template-rows: auto auto auto auto auto;
+     grid-gap:10px;
+     justify-content: center;  
+    }
+
+    /*form styling */
+ 
+    .button a:hover {
+            background-color: seashell;
+            color: rgb(104, 163, 80);
+        
+    }
+    input[type=text],input[type=number],input[type=email],select,textarea{
+            width: 100%;
+            display:block;
+    }
+    fieldset{
+            width:540px;
+    }
+#mainform{
+    flex-direction: column;
+    align-items: stretch;
+}
+.tableact{
+    width: 50%;
+}
+#activityContainer iframe{
+    width: 300px;
+    height: 175px;
+}
+.convideo{
+    width:540px ;
+    height:315px ;
+}
+
+#mainForm{
+    background-image:linear-gradient(rgba(22, 160, 22, 0.658),rgba(128, 0, 128, 0.39));
+}  
+.container img{
+    border-radius:10px ;
+    width: 100%;
+    height: 300px; 
+    align-self: auto;
+    justify-content: center;
+    object-fit: cover; 
+    border: none;
+
+}
+
+#activityContainer .act1{
+   
+    width: auto;
+    align-self: center;
+   
+}
+#activityContainer .act2{
+   
+    width: auto;
+    align-self: center;
+}
+#activityContainer .act3{
+   
+    width: auto;
+    align-self: center;
+}
+.animal p,.plant p,.bird p{
+    color: rgb(70, 68, 68);
+    text-align: left;
+    background: rgba(25, 151, 57, 0.493);
+    font-size:x-large;
+    margin: 10px 10px 10px 10px;
+}
+.birds ,.animals  ,.plants {
+         
+    font-size:x-large;
+    border: rgb(17,17,17) 1px;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 20px 480px 20px 480px;
+    border-radius: 30px;
+}
+#activityContainer{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px 20px 20px 20px ;
+    margin: 20px 10px 20px 10px;
+    align-items: center;
+}
+#output {
+    min-height: 50px;
+    width: 590px;
+    border: 1px solid black;  
+  }
+#output1 {
+    min-height: 50px;
+    width: 590px;
+    border: 1px solid black;  
+  }
+  #output2 {
+    min-height: 50px;
+    width: 620px;
+    border: 1px solid black;  
+  } 
+  fieldset{
+    width:620px;
+    align-items: center;
+  }
+}
