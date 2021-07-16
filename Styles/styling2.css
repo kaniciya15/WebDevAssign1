@@ -319,23 +319,13 @@ fieldset{
     object-fit: cover; 
     border :  dotted rgba(240, 236, 236, 0.815) 6px;  
 }
-#activityContainer .act1{
+#activityContainer .act1, #activityContainer .act2, #activityContainer .act3 {
     margin: 75px 200px 75px 200px;
     width: auto;
     align-self: center;
    
 }
-#activityContainer .act2{
-    margin: 75px 200px 75px 200px;
-    width: auto;
-    align-self: center;
-}
-#activityContainer .act3{
-    margin: 75px 200px 75px 200px;
-    width: auto;
-    
-    align-self: center;
-}
+
 .animal p,.plant p,.bird p{
     color: rgb(70, 68, 68);
     text-align: left;
