@@ -166,9 +166,7 @@ tr:nth-child(even){
     border:15px rgba(228, 222, 222, 0.616) solid;
     text-align: center;
 }
-
-#activityContainer .act1{
-    background-image:url(../Images/sealion.svg),linear-gradient(rgb(52, 52, 219),lightblue);
+#activityContainer .act1, #activityContainer .act2, #activityContainer .act3{
     background-repeat: no-repeat;
     background-origin:padding-box;
     border: 50px double rgb(125, 179, 201);
@@ -176,31 +174,18 @@ tr:nth-child(even){
     background-size:50px 50px,100% 100%;
     color: rgb(176, 240, 185);
     border-radius: 20px;
-    
+}
+#activityContainer .act1{
+    background-image:url(../Images/sealion.svg),linear-gradient(rgb(52, 52, 219),lightblue);
  
 }
 #activityContainer .act2{
     background-image:url(../Images/elephanta.svg),linear-gradient(rgb(53, 20, 20),rgb(236, 236, 48));
-    background-repeat: no-repeat;
-    background-origin:padding-box;
-    border: 50px double rgb(121, 94, 68);
-    padding: 25px;
-    background-size:50px 50px,100% 100% ;
-    color: rgb(176, 240, 185);
-    border-radius: 20px;
- 
+
 }
 #activityContainer .act3{
     background-image: url(../Images/nighta.svg),linear-gradient(silver,black);
-    background-repeat: no-repeat;
-    background-origin:padding-box;
-    border: 50px double  rgb(132, 138, 132);
-    padding: 25px;
-    background-size:50px 50px,100% 100% ;
-    color: rgb(176, 240, 185);
-    border-radius: 20px;
-
-}
+ }
 
 
 /*purchase and donate*/
