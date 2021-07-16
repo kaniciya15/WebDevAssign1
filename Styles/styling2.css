@@ -156,7 +156,6 @@ tr:nth-child(even){
 #activityContainer .act1, #activityContainer .act2, #activityContainer .act3{
     background-repeat: no-repeat;
     background-origin:padding-box;
-    border: 50px double rgb(125, 179, 201);
     padding: 25px;
     background-size:50px 50px,100% 100%;
     color: rgb(176, 240, 185);
@@ -164,14 +163,15 @@ tr:nth-child(even){
 }
 #activityContainer .act1{
     background-image:url(../Images/sealion.svg),linear-gradient(rgb(52, 52, 219),lightblue);
- 
+    border: 50px double rgb(125, 179, 201);
 }
 #activityContainer .act2{
     background-image:url(../Images/elephanta.svg),linear-gradient(rgb(53, 20, 20),rgb(236, 236, 48));
-
+    border: 50px double rgb(121, 94, 68);
 }
 #activityContainer .act3{
     background-image: url(../Images/nighta.svg),linear-gradient(silver,black);
+    border: 50px double  rgb(132, 138, 132);
  }
 
 
