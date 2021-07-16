@@ -149,9 +149,7 @@ section img{
 /*image*/
 section img{
     width: 70%;
-    height: 100px;
-    border-radius: 8px;
-}
+ }
 
 #slContainer {
     display: grid;
@@ -159,12 +157,7 @@ section img{
     grid-template-rows: 1fr 1fr ;
     grid-column-gap:20px; 
 }
-header{
-    overflow: hidden;
-    padding: 1em;
-    background-image:linear-gradient(rgba(123, 133, 143, 0.637), rgba(81, 151, 231, 0.568)); 
-     background-repeat: round;
-  }
+
   #slContainer .box {
     border: 30px dashed rgb(90, 89, 168);
     padding: 50px 30px 50px 30px;
