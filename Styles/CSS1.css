@@ -166,13 +166,8 @@ header{
      background-repeat: round;
   }
   #slContainer .box {
-    background-image:url(../Images/sealion1.svg),linear-gradient(lightblue,rgb(57, 58, 158));
-    background-repeat: no-repeat;
-    background-origin:padding-box;
     border: 30px dashed rgb(90, 89, 168);
     padding: 50px 30px 50px 30px;
-    background-size:50px 50px,100% 100% ;
-    align-self:center;
     margin: 40px 80px 40px 80px;
 }
 }
