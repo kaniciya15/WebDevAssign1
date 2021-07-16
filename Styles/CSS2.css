@@ -28,9 +28,7 @@ body{
          margin: .8em .2em;
          box-sizing:border-box;
 }
-    
-
- 
+   
     header{
       overflow: hidden;
       padding: 1em;
@@ -184,7 +182,6 @@ body{
     /*image*/
     section img{
         width: 25%;
-        height: 100px;
     }
     #slContainer .box{
          display:flex;
