@@ -137,32 +137,17 @@ footer li{
   position: absolute;
   top:-1200px;
 } 
-#hero1{
+#hero1, #hero2{
     width: 100%;
-    height: auto;
-    
+    height: auto; 
 }
-#hero2{
-  width: 100%;
-  height: auto;
-  
-}
+
 #mainHeader{
 overflow: hidden;
 padding: 1em;
 background-image:linear-gradient(rgba(116, 243, 32, 0.61), rgba(28, 231, 163, 0.589)), url(../Images/animallbw.png); 
 /* deposit photos(2009-2021) 175 Zoo animal outlines Stock Vectors, Royalty-free Vector Images & Illustrations. Available at:https://depositphotos.com/vector-images/zoo-animal-outlines.html (Accessed:7th April 2021)-->*/ 
 background-repeat: round;
-}
-/*purchase&donate*/
-.marq{
-   text-align: center;
-   height: 70px;
-   overflow: hidden;
-   color:rgb(121, 74, 148);
-   border:none;
-   font-size: xx-large;
-   width: 75%;
 }
 p{
   font-size: large;
@@ -177,7 +162,6 @@ p{
   flex-flow:row wrap;
 }
 .box{
-border:0.4em rgba(245, 245, 245, 0.712) solid;
 color:whitesmoke;
 margin: 1em;
 padding: 1em;
@@ -185,9 +169,6 @@ background-image: linear-gradient(#2c5f2dff,rgb(183, 194, 82));
 border-radius: 50px;
 align-self: center;
 border: groove 20px rgba(41, 121, 41, 0.651);
-
-
-
 }
 
 #mainNav a.active {
@@ -289,16 +270,12 @@ text-align: left;
   background-image:linear-gradient(rgba(116, 243, 32, 0.342), rgba(28, 231, 163, 0.342),rgba(116, 243, 32, 0.329)); 
   
 }
-#hero1{
+#hero1,#hero2{
   width: 100%;
   height: auto;
   border-radius: 1000px;
 }
-#hero2{
-width: 100%;
-height: auto;
-border-radius: 1000px;
-}
+
 
 
 }
