@@ -27,8 +27,7 @@ body{
          display:grid;
          margin: .8em .2em;
          box-sizing:border-box;
-         box-sizing:border-box;     
-    }
+}
     
 
  
@@ -190,16 +189,9 @@ body{
     #slContainer .box{
          display:flex;
          flex-flow: row wrap;
-         margin: .8em .2em;
-         
-         box-sizing:border-box;  
+         margin: .8em .2em;     
    }
   
-   header{
-    overflow: hidden;
-    padding: 1em;
-    background-image:linear-gradient(rgba(221, 225, 230, 0.699), rgba(81, 151, 231, 0.411));
-   }
    #container{
     width: 80%;  
    }
