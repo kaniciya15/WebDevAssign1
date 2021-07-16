@@ -144,7 +144,7 @@ tr:nth-child(even){
 #activityContainer img{
     text-align: center;
 }
-.act1 img{
+.act1 img, .act2 img, .act3 img{
     width: 200px;
     height: 200px;
     border-radius: 75px;
@@ -152,20 +152,7 @@ tr:nth-child(even){
      text-align: center;
     
 }
-.act2 img {
-    width: 200px;
-    height: 200px;
-    border-radius: 75px;
-    border:15px rgba(228, 222, 222, 0.616) solid;
-    text-align: center;
-}
-.act3 img{
-    width: 200px;
-    height: 200px;
-    border-radius: 75px;
-    border:15px rgba(228, 222, 222, 0.616) solid;
-    text-align: center;
-}
+
 #activityContainer .act1, #activityContainer .act2, #activityContainer .act3{
     background-repeat: no-repeat;
     background-origin:padding-box;
