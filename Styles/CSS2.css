@@ -196,11 +196,8 @@ body{
     width: 80%;  
    }
    .box{
-    border:2em rgba(113, 153, 212, 0.623) dotted;
-    color:rgb(170, 204, 231);
     margin: 10em 5em 10em 5em;
     padding: 5em 5em 5em 5em;
-    background-image: linear-gradient(rgba(122, 172, 218, 0.404),rgba(71, 73, 173, 0.445));
-    font-size: larger;
+   
     }
   }
