@@ -259,21 +259,13 @@ fieldset{
     border: rgb(141, 153, 152) groove 10px;
 
 }
-#output {
+#output, #output1, #output2 {
     min-height: 50px;
     width:auto;
     border: 1px solid black;  
   }
-#output1 {
-    min-height: 50px;
-    width:auto;
-    border: 1px solid black;  
-  }
-  #output2 {
-    min-height: 50px;
-    width:auto;
-    border: 1px solid black;  
-  } 
+  
+  
 
 @media only screen and (min-width:800px){
     #animalContainer, #birdsContainer{
