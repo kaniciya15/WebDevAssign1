@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="Styles/styling1.css">
         <link rel="stylesheet" href="Styles/styling2.css">
         <link rel="stylesheet" href="Styles/normalize.css">
-        <script src="script/main.js"></script>
+      
 
     <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
@@ -39,7 +39,7 @@
         
             <main>
                
-                <form  method="get" >
+                <form  method="get" id="myFrom">
                 <fieldset>
                 <legend>Purchase Tickets</legend>
                 <fieldset>
@@ -74,39 +74,52 @@
                   </fieldset>
                   <fieldset>
                     <legend>Duration</legend>
-                    <p>
-                    <input type="text" list="durations" id="duration" name="duration" >
-                    <datalist id="durations">
-                        <option>3 Hours</option>
-                        <option>1/2 Day</option>
-                        <option>Full Day</option> 
-                        <option>2 Days</option> 
-                    </datalist>
+                        <p>
+                        <select id="durations">
+                        <option value="">Select Duration</option>
+                        <option value="3 Hours">3 Hours</option>
+                        <option value="1/2 Day">1/2 Day</option>
+                        <option value="Full Day">Full Day</option> 
+                        <option value="2 Days">2 Days</option> 
+                        </select>
                        </p>
                   </fieldset>
                   <fieldset>
                     <legend>Extras</legend>
                     <p>
                     <label>Annual Pass</label>
-                    <input type="radio" name="extrapass">
+                    <input type="checkbox" name="extrapass">
                     </p>
                     <p>
                     <label>Food Token</label>
-                    <input type="radio" name="extrapass">
+                    <input type="checkbox" name="extrapass">
                     </p>
                   </fieldset>
                   <p>
-                  <button type="button" name="submit" id="AddOrders">Add to Order</button>
-                  <button type="button" name="submit" id="PlaceOrders">Place Order</button>
+                  <button type="button" name="AddOrders" id="AddOrders">Add to Order</button>
+                  <button type="button" value="Reset form" name="PlaceOrders" id="PlaceOrders">Place Order</button>
                   </p>
                   </fieldset>
 
                  
                   </form>
+                  <br>
+                 <p>Current orders</p>
+                  <p id="output"></p>
+                  <p id="outputt1"></p> 
+                  <p id="outputt2"></p>
+                  <p id="outputtt"></p>
+                  <p>Overall orders</p>
+                  <p id="output1"></p>
+                  <p id="outputtt1"></p> 
+                  <p id="outputtt2"></p>
+                  <p id="outputttt"></p>
+                  <p>Cost of Current orders</p>
+                  <p id="output2">0.00</p> 
+                  <p>Cost of Overall orders</p>
+                  <p id="output3">0.00</p> 
 
-                 
-                  <p id="output">Add to orders</p> 
-                  <p id="output1">Place orders</p> 
+                  <br>
 
 
 
@@ -127,6 +140,17 @@
                  <form method="get">
                    <fieldset>
                      <legend>Donation</legend>
+                     <fieldset>
+                       <legend>Personal Details</legend>
+                       <p>
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" placeholder="Your name..." >
+                       </p>
+                       <p>
+                         <label>Address:</label>
+                        <textarea cols="40" rows="5" id="address" name="address" placeholder="Your Address..." ></textarea>
+                      </p>
+                     </fieldset>
                    
                       <fieldset>
                         <legend>Card details</legend>
@@ -140,7 +164,7 @@
                        </p>
                        <p>
                             <label for="securityCode">Security code:</label>
-                            <input type="text" id="securityCode" name="securityCode" placeholder="Last 3 digits in the back of the card" pattern="^[0-9]{3}$">   <!--^ to start  3 occurance-->
+                            <input type="password" id="securityCode" name="securityCode" placeholder="Last 3 digits in the back of the card" pattern="^[0-9]{3}$">   <!--^ to start  3 occurance-->
                       </p>
                       <p>
                             <label for="expiryDate">Expiry date:</label>
@@ -157,8 +181,23 @@
                      <button type="button" name="donate" id="donate">Donate</button>
                      </p>
                    </fieldset>
+
                  </form>
-                 <p id="output2"></p> 
+                  <br>
+                 <form  method="get">
+                   <fieldset>
+                  <p>  
+                     <button type="button" name="AddFav" id="AddFav">Add to Favourites</button>
+                  </p>
+                  <p>
+                    <button type="button" name="OrderFav" id="OrderFav">Order Favourites</button>
+                  </p>
+                  <p>
+                    <button type="button" name="CheckLoyalty" id="CheckLoyalty">Check Loyalty</button>
+                  </p>
+                </fieldset>
+                 </form>
+                 <br>
 
 
 
@@ -217,5 +256,6 @@
                 &copy;APIIT. All Rights Reserved.Last updated 2021
             </footer>
         </div>
+        <script src="script/main.js"></script>
     </body>
 </html>
