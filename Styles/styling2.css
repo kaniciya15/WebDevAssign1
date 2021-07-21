@@ -259,12 +259,12 @@ fieldset{
     border: rgb(141, 153, 152) groove 10px;
 
 }
-#output, #output1, #output2 {
-    min-height: 50px;
+#output,#outputt1,#outputt2,  #outputtt, #output1 ,#outputtt1,#outputtt2,#outputttt, #output2, #output3{
+    min-height: 25px;
     width:auto;
-    border: 1px solid black;  
+    border: 1px solid black; 
+    background-image:linear-gradient(rgba(0, 128, 0, 0.432),rgba(255, 255, 255, 0.377),rgba(128, 0, 128, 0.281)) 
   }
-  
   
 
 @media only screen and (min-width:800px){
@@ -348,4 +348,8 @@ fieldset{
     margin: 20px 480px 20px 480px;
     border-radius: 30px;
 }
+    #output, #outputt1, #outputt2, #outputtt,#output1,#outputtt1,#outputtt2,#outputttt, #output2, #output3{
+    width: 590px;
+
+  }
 }
