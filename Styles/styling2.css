@@ -223,9 +223,10 @@ legend{
     background-color: #ccc;
     color: white;
     padding: 5px 10px;
+    align-items: center;
 }
 fieldset{
-    width:200px;
+    width:auto;
     background-image:linear-gradient(rgba(149, 211, 149, 0.637),rgba(208, 151, 216, 0.726)); 
     
 }
@@ -352,4 +353,7 @@ fieldset{
     width: 590px;
 
   }
+    fieldset{
+        width:650px;
+    }
 }
