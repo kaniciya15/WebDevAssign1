@@ -260,12 +260,24 @@ fieldset{
     border: rgb(141, 153, 152) groove 10px;
 
 }
-#output,#outputt1,#outputt2,  #outputtt, #output1 ,#outputtt1,#outputtt2,#outputttt, #output2, #output3{
+#output,#outputt1,#outputt2, #out1puttt,#out2puttt,#out3puttt,#output4, #output1 ,#outputtt1,#outputtt2,#out1putttt,#out2putttt,#out3putttt,#output5 ,#output2, #output3{
     min-height: 25px;
     width:auto;
     border: 2px solid grey; 
-    background-image:linear-gradient(rgba(0, 128, 0, 0.432),rgba(255, 255, 255, 0.377),rgba(128, 0, 128, 0.281)) 
+    background-image:linear-gradient(rgba(0, 128, 0, 0.432),rgba(255, 255, 255, 0.377),rgba(128, 0, 128, 0.281)) ;
+    align-self: center;
+    
   }
+  
+#outputContainer,#outputContainer1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr  ;
+    grid-column-gap:5px; 
+  }
+#center1,#center2,#center3,#center4{
+    text-align: center;
+}
   
 
 @media only screen and (min-width:800px){
@@ -349,11 +361,29 @@ fieldset{
     margin: 20px 480px 20px 480px;
     border-radius: 30px;
 }
-    #output, #outputt1, #outputt2, #outputtt,#output1,#outputtt1,#outputtt2,#outputttt, #output2, #output3{
-    width: 590px;
+#output, #outputt1, #outputt2, #output4,#output1,#outputtt1,#outputtt2,#outputttt,#output5, #output2, #output3{
+    width: auto;
+    align-items: center;
+    padding: 0px 0px ;
+    margin: 10px 300px;
 
   }
+  #out1puttt, #out2puttt, #out3puttt,#out1putttt, #out2putttt, #out3putttt{
+    width: auto;
+    align-items: center;
+    padding:0px 0px ;
+    margin: 0px 50px 0px 50px;
+  }
+
     fieldset{
-        width:650px;
-    }
+    width:auto;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    margin: 50px 150px 50px 150px;
+  }
+  legend{
+    width:auto;
+    padding: 50px 5px;
+    margin: 0px 100px 0px 100px;
+  }
 }
