@@ -260,7 +260,7 @@ fieldset{
     border: rgb(141, 153, 152) groove 10px;
 
 }
-#output,#outputt1,#outputt2, #out1puttt,#out2puttt,#out3puttt,#output4, #output1 ,#outputtt1,#outputtt2,#out1putttt,#out2putttt,#out3putttt,#output5 ,#output2, #output3{
+#output, #outputt1, #output4,#output1,#out1puttt,#out1putttt,#outputtt1,#output5, #output2,#output2t, #output3{
     min-height: 25px;
     width:auto;
     border: 2px solid grey; 
@@ -268,16 +268,25 @@ fieldset{
     align-self: center;
     
   }
-  
-#outputContainer,#outputContainer1{
+  #durationContainer,#numberContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr  ;
+    grid-column-gap:5px; 
+  }
+  #extraContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr  ;
     grid-column-gap:5px; 
   }
 #center1,#center2,#center3,#center4{
     text-align: center;
 }
+.required-field::before{
+    content:"*";
+    color:Red;
+  }
   
 
 @media only screen and (min-width:800px){
@@ -368,22 +377,23 @@ fieldset{
     margin: 10px 300px;
 
   }
-  #out1puttt, #out2puttt, #out3puttt,#out1putttt, #out2putttt, #out3putttt{
+  #output, #outputt1, #output4,#output1,#out1puttt,#out1putttt,#outputtt1,#output5, #output2,#output2t, #output3{
     width: auto;
     align-items: center;
-    padding:0px 0px ;
-    margin: 0px 50px 0px 50px;
+    padding: 0px 0px ;
+    margin: 10px 300px;
+
   }
 
-    fieldset{
+
+
+  fieldset{
     width:auto;
     align-items: center;
-    padding: 0px 0px 0px 0px;
-    margin: 50px 150px 50px 150px;
+  
   }
   legend{
     width:auto;
-    padding: 50px 5px;
-    margin: 0px 100px 0px 100px;
+   
   }
 }
