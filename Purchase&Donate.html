@@ -41,60 +41,125 @@
                
                 <form  method="get" id="myFrom">
                 <fieldset>
-                <legend>Purchase Tickets</legend>
+                <legend><h3>Purchase Tickets</h3></legend>
                 <fieldset>
-                    <legend>Choice of Ticket</legend>
+                    <legend><b>Choice of Ticket</b></legend>
                     <p>
                     
-                    <input type="radio" id="Day" name="passType" value="Day" >
+                    <input type="checkbox" id="Day" name="passType" value="Day" >
                     <label for="Day">Day Pass</label>
                     </p>
                     <p>
                    
-                    <input type="radio" id="Student" name="passType" value="Student" >
+                    <input type="checkbox" id="Student" name="passType" value="Student" >
                     <label for="Student">Student Pass</label>
                     </p>
                     <p>
                    
-                    <input type="radio" id="Foreigner" name="passType" value="Foreigner" >
+                    <input type="checkbox" id="Foreigner" name="passType" value="Foreigner" >
                     <label for="Foreigner">Foreigner Pass</label>
                     </p>
                   </fieldset>
-                   
+                   <div id="numberContainer">
                   <fieldset>
-                    <legend>Number of</legend>
+                    <legend><b>Day Ticket number of</b></legend>
                     <p>
-                    <label for="noadult">Adults </label>
-                    <input type="number" id="noadult" name="noadult" min="0" >
+                    <label for="Dnoadult">Adults </label>
+                    <input type="number" id="Dnoadult" name="Dnoadult" min="0" >
                     </p>
                     <p>
-                    <label for="nochild">Children</label>
-                    <input type="number" id="nochild" name="nochild" min="0" >
+                    <label for="Dnochild">Children</label>
+                    <input type="number" id="Dnochild" name="Dnochild" min="0" >
                    </p>
                   </fieldset>
                   <fieldset>
-                    <legend>Duration</legend>
+                    <legend><b>Student Ticket number of</b></legend>
+                    <p>
+                    <label for="Snoadult">Adults </label>
+                    <input type="number" id="Snoadult" name="Snoadult" min="0" >
+                    </p>
+                    <p>
+                    <label for="Snochild">Children</label>
+                    <input type="number" id="Snochild" name="Snochild" min="0" >
+                   </p>
+                  </fieldset>
+                  <fieldset>
+                    <legend><b>Foreigner Ticket number of</b></legend>
+                    <p>
+                    <label for="Fnoadult">Adults </label>
+                    <input type="number" id="Fnoadult" name="Fnoadult" min="0" >
+                    </p>
+                    <p>
+                    <label for="Fnochild">Children</label>
+                    <input type="number" id="Fnochild" name="Fnochild" min="0" >
+                   </p>
+                  </fieldset>
+                  </div>
+                  <div id="durationContainer">
+                  <fieldset>
+                    
+                    <legend><b>Duration: Day</b></legend>
                         <p>
-                        <select id="durations">
+                        <select id="Ddurations">
                         <option value="">Select Duration</option>
-                        <option value="3 Hours">3 Hours</option>
-                        <option value="1/2 Day">1/2 Day</option>
-                        <option value="Full Day">Full Day</option> 
-                        <option value="2 Days">2 Days</option> 
+                        <option value="Day: 3 Hours">3 Hours</option>
+                        <option value="Day: 1/2 Day">1/2 Day</option>
+                        <option value="Day: Full Day">Full Day</option> 
+                        <option value="Day: 2 Days">2 Days</option> 
                         </select>
                        </p>
                   </fieldset>
                   <fieldset>
-                    <legend>Extras</legend>
-                    <p>
-                    <label>Annual Pass</label>
-                    <input type="checkbox" name="extrapass">
-                    </p>
-                    <p>
-                    <label>Food Token</label>
-                    <input type="checkbox" name="extrapass">
-                    </p>
+                    <legend><b>Duration: Student</b></legend>
+                        <p>
+                        <select id="Sdurations">
+                        <option value="">Select Duration</option>
+                        <option value="Student: 3 Hours">3 Hours</option>
+                        <option value="Student: 1/2 Day">1/2 Day</option>
+                        <option value="Student: Full Day">Full Day</option> 
+                        <option value="Student: 2 Days">2 Days</option> 
+                        </select>
+                       </p>
                   </fieldset>
+                  <fieldset>
+                    <legend><b>Duration: Foreigner</b></legend>
+                        <p>
+                        <select id="Fdurations">
+                        <option value="">Select Duration</option>
+                        <option value="Foreigner: 3 Hours">3 Hours</option>
+                        <option value="Foreigner: 1/2 Day">1/2 Day</option>
+                        <option value="Foreigner: Full Day">Full Day</option> 
+                        <option value="Foreigner: 2 Days">2 Days</option> 
+                        </select>
+                       </p>
+                  </fieldset>
+                </div>
+                <div id="extraContainer">
+                  <fieldset>
+                    <legend><b>Extras:Annual pass</b></legend>
+                    <p>
+                    <label for="AnnualPass">Annual Pass</label>
+                    <input type="checkbox" id="AnnualPass" name="extrapass" value="AnnualPass">
+                    </p>
+                    <p>
+                      <label for="noAP"> </label>
+                      <input type="number" id="noAP" name="noAP" min="0" >
+                      </p>
+                  </fieldset>
+                  <fieldset>
+                    <legend><b>Extras:Food token</b></legend>
+                    <p>
+                    <label for="FoodToken">Food Token</label>
+                    <input type="checkbox" id="FoodToken" name="extrapass" value="FoodToken">
+                    </p>
+                    <p>
+                      <label for="noFT"> </label>
+                      <input type="number" id="noFT" name="noFT" min="0" >
+                      </p>
+                    
+                  </fieldset>
+                 </div>
+                
                   <p>
                   <button type="button" name="AddOrders" id="AddOrders">Add to Order</button>
                   <button type="button" value="Reset form" name="PlaceOrders" id="PlaceOrders">Place Order</button>
@@ -104,20 +169,33 @@
                  
                   </form>
                   <br>
-                 <p>Current orders</p>
+                 <p id="center1"><b>Current orders</b></p>
                   <p id="output"></p>
                   <p id="outputt1"></p> 
-                  <p id="outputt2"></p>
-                  <p id="outputtt"></p>
-                  <p>Overall orders</p>
+                
+                   <p id="out1puttt"></p>
+                
+                  <p id="output4"></p>
+
+                  <p id="center3"><b>Cost of Current orders</b></p>
+                  <p id="output2">0.00</p> 
+                  <p id="output2t">0.00</p> 
+                  
+                  <p id="center2"><b>Overall orders</b></p>
                   <p id="output1"></p>
                   <p id="outputtt1"></p> 
-                  <p id="outputtt2"></p>
-                  <p id="outputttt"></p>
-                  <p>Cost of Current orders</p>
-                  <p id="output2">0.00</p> 
-                  <p>Cost of Overall orders</p>
+           
+                  <p id="out1putttt"></p>
+               
+                  <p id="output5"></p>
+
+                  
+
+                  <p id="center4"><b>Cost of Overall orders</b></p>
                   <p id="output3">0.00</p> 
+                  
+                
+
 
                   <br>
 
@@ -137,44 +215,58 @@
 
 
 
-                 <form method="get">
+                 <form method="GET">
                    <fieldset>
-                     <legend>Donation</legend>
+                     <legend><h3>Donation</h3></legend>
                      <fieldset>
-                       <legend>Personal Details</legend>
+                      <legend> <b>Personal Details</b></legend>
                        <p>
-                        <label for="name">Name: </label>
+                        <label for="name"><span class="required-field"></span>Name: </label>
                         <input type="text" id="name" name="name" placeholder="Your name..." >
                        </p>
                        <p>
-                         <label>Address:</label>
+                         <label><span class="required-field"></span>Address:</label>
                         <textarea cols="40" rows="5" id="address" name="address" placeholder="Your Address..." ></textarea>
                       </p>
                      </fieldset>
                    
                       <fieldset>
-                        <legend>Card details</legend>
+                       <legend><b>Card details</b></legend>
                       <p>
+                            <label for="visa"><span class="required-field"></span>Visa</label>
                             <input type="radio" id="visa" name="cardType" value="visa" >
-                            <label for="visa">Visa</label>
+                          
                        </p>
                        <p>
+                            <label for="mc"><span class="required-field"></span>Masterecard</label>
                             <input type="radio" id="mc" name="cardType" value="mastercard">
-                            <label for="mastercard">Masterecard</label>
+                           
                        </p>
                        <p>
-                            <label for="securityCode">Security code:</label>
+                            <label for="securityCode"><span class="required-field"></span>Security code:</label>
                             <input type="password" id="securityCode" name="securityCode" placeholder="Last 3 digits in the back of the card" pattern="^[0-9]{3}$">   <!--^ to start  3 occurance-->
                       </p>
                       <p>
-                            <label for="expiryDate">Expiry date:</label>
+                            <label for="expiryDate"><span class="required-field"></span>Expiry date:</label>
                             <input type="month" id="expiryDate" name="expiryDate" min="2019-11" value="2019-11">
                        
                         </p>
-                        <p>
-                          <label for="amount">Amount $:</label>
-                            <input type="number"  id="amount"  name="amount" size="10">
-                        </p>
+                        
+                          
+                              <p>
+                              <label for="amounts"><span class="required-field"></span>Amount:</label>
+                              <select id="amounts">
+                              <option value="">Select donation amount</option>
+                              <option value="100">100.00</option>
+                              <option value="250">250.00</option>
+                              <option value="500">500.00</option> 
+                              <option value="1000">1000.00</option> 
+                              <option value="2500">2500.00</option>
+                              <option value="5000">5000.00</option> 
+                              <option value="10000">10000.00</option> 
+                              </select>
+                             </p>
+                        
                     
                      </fieldset>
                      <p>
@@ -199,7 +291,7 @@
                  </form>
                  <br>
 
-
+</main>
 
 
 
