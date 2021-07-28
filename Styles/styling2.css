@@ -260,7 +260,7 @@ fieldset{
     border: rgb(141, 153, 152) groove 10px;
 
 }
-#output, #outputt1, #output4,#output1,#out1puttt,#out1putttt,#outputtt1,#output5, #output2,#output2t, #output3{
+#output, #outputt1, #output4,#output1,#out1puttt,#out1putttt,#outputtt1,#output5, #output2,#output2t, #output3,#output6{
     min-height: 25px;
     width:auto;
     border: 2px solid grey; 
@@ -280,7 +280,7 @@ fieldset{
     grid-template-rows: 1fr  ;
     grid-column-gap:5px; 
   }
-#center1,#center2,#center3,#center4{
+#center1,#center2,#center3,#center4,#center5{
     text-align: center;
 }
 .required-field::before{
@@ -371,7 +371,7 @@ fieldset{
     margin: 20px 480px 20px 480px;
     border-radius: 30px;
 }
-#output, #outputt1, #output4,#output1,#out1puttt,#out1putttt,#outputtt1,#output5, #output2,#output2t, #output3{
+#output, #outputt1, #output4,#output1,#out1puttt,#out1putttt,#outputtt1,#output5, #output2,#output2t, #output3,#output6{
     width: auto;
     align-items: center;
     padding: 0px 0px ;
