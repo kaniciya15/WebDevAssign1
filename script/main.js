@@ -17,7 +17,7 @@ const listDuration3=document.getElementById("Fdurations");
 const txtOutput = document.getElementById("output");
 const txtOutputt1 = document.getElementById("outputt1");
 
-const txt1Outputtt = document.getElementById("out1puttt");
+const txtOut1puttt = document.getElementById("out1puttt");
 
 const txtOutput4 = document.getElementById("output4");
 ///
@@ -66,7 +66,9 @@ btnAddOrder.addEventListener("click" , AddOrders);
 btnDonate.addEventListener("click", donate);
 btnPlaceOrder.addEventListener("click", PlaceOrders);
 
-
+btnAddFav.addEventListener("click" , AddFavourites);
+btnOrderFav.addEventListener("click" , OrderFavourites);
+btnCheckLoyal.addEventListener("click" , CheckLoyalty);
 
 let pass = document.querySelectorAll("input[name='passType']");
 for(let i=0; i<pass.length; i++){
@@ -170,7 +172,7 @@ function CurrentOrdersDuration(){
   let Sdurations = listDuration2.options[listDuration2.selectedIndex].value;
   let Fdurations = listDuration3.options[listDuration3.selectedIndex].value;
      
-     txt1Outputtt.innerText=`Duration:
+     txtOut1puttt.innerText=`Duration:
      ${Ddurations} 
      ${Sdurations}
      ${Fdurations}`;
@@ -1141,7 +1143,7 @@ if(Ddurations == 'Day: 2 Days' && Sdurations == 'Student: 1/2 Day' && Fdurations
 }
 }
 return [
-  txt1Outputtt.innerText,
+  txtOut1puttt.innerText,
   txtOutput2.innerText
 ];
 
@@ -1165,7 +1167,7 @@ function ExtraOrders(){
  
   if(document.getElementById("AnnualPass").checked || document.getElementById("FoodToken").checked){
   
-    txtOutput2t.innerText=` Extras: ${document.getElementById("noAP").value*annualpass} | ${document.getElementById("noFT").value*foodtoken}
+    txtOutput2t.innerText=` Extras: ${document.getElementById("noAP").value*annualpass}(${document.getElementById("noAP").value}) | ${document.getElementById("noFT").value*foodtoken}(${document.getElementById("noFT").value})
     Total of Extras:${document.getElementById("noAP").value*annualpass+document.getElementById("noFT").value*foodtoken}`;
    
   } 
@@ -1174,8 +1176,7 @@ function ExtraOrders(){
 
 
 function AddOrders(){
- //how to do this Jesus pls help me 
- //Thank you Jesus!
+ 
  let one=CurrentOrdersTickets();
  let two=CurrentOrdersNumber();
  let three=CurrentOrdersDuration();
@@ -1225,33 +1226,16 @@ function AddOrders(){
          
  
 function PlaceOrders(){
-  alert("THANK YOU! for your purchases.  @mono Ticketing.PTD.Ltd ");
 
-  document.getElementById("Day").value='';
-  document.getElementById("Student").value='';
-  document.getElementById("Foreigner").value='';
-  document.getElementById("Dnoadult").value='';
-  document.getElementById("Dnochild").value='';
-  document.getElementById("Snoadult").value='';
-  document.getElementById("Snochild").value='';
-  document.getElementById("Fnoadult").value='';
-  document.getElementById("Fnochild").value='';
-  document.getElementById("Ddurations").value='';
-  document.getElementById("Sdurations").value='';
-  document.getElementById("Fdurations").value='';
-  document.getElementById("output").innerHTML="";
-  document.getElementById("outputt1").innerHTML="";
-  document.getElementById("outputt2").innerHTML="";
-  document.getElementById("out1puttt").innerHTML="";
-  document.getElementById("out2puttt").innerHTML="";
-  document.getElementById("out3puttt").innerHTML="";
+  alert("THANK YOU!.  @mono.PTD.Ltd ");
+
+ 
   document.getElementById("output1").innerHTML="";
   document.getElementById("outputtt1").innerHTML="";
-  document.getElementById("outputtt2").innerHTML="";
   document.getElementById("out1putttt").innerHTML="";
-  document.getElementById("out2putttt").innerHTML="";
-  document.getElementById("out2putttt").innerHTML="";
-  document.getElementById("output4").innerHTML="";
+  document.getElementById("output5").innerHTML="";
+  document.getElementById("output3").innerHTML="0.00";
+ 
 
 }
 
@@ -1266,13 +1250,69 @@ function donate(){
       document.getElementById("amounts").value='';
      
 }
+let Ticketbooking = [];
 
 
+function showEntries(){
+  txtOutput.value = "";
+  txtOutputt1.value = "";
+  txtOut1puttt.value = "";
+  txtOutput4.value = "";
+  for (let i = 0; i < Ticketbooking.length; i++) {
+   
+    //txtOutput +=Ticketbooking
+    txtOutputt1.value +=  Ticketbooking[i].Dnoadult + "\t"  + Ticketbooking[i].Dnochild +"\t"+Ticketbooking[i].Snoadult 
+    + "\t"  + Ticketbooking[i].Snochild+"\t" + Ticketbooking[i].Fnoadult + "\t"  + Ticketbooking[i].Fnochild+ "\n";
+    txtOut1puttt.value += Ticketbooking[i].Ddurations + "\t"+ Ticketbooking[i].Sdurations + "\t"+Ticketbooking[i].Fdurations + "\n";
+    txtOutput4.value += Ticketbooking[i].noAP +"\t" + Ticketbooking[i].noFT+ "\n";
+  }
+
+}
+
+function AddFavourites(){
+  document.getElementById("outputt1").innerHTML="";
+  const favourites0 = {
+   /* "Day":,
+    "Student":,
+    "Foreigner":*/
+  }
+     const favourites1 = {
+       "Dnoadult": txtDAdult.value,
+       "Dnochild": txtDChild.value,
+       "Snoadult": txtSAdult.value,
+       "Snochild": txtSChild.value,
+       "Fnoadult": txtFAdult.value,
+       "Fnochild": txtFChild.value,
+     };
+   const favourites2 = {
+    "Dduration": listDuration1.value,
+    "Sduration": listDuration2.value,
+    "Fduration": listDuration3.value
+   };
+
+    const favourites3= {
+      
+     };
+     const favourites4 = {
+      "noAP":txtnoExtras1.value,
+      "noFT":txtnoExtras2.value
+     }
+     Ticketbooking.push(favourites0,favourites1,favourites2,favourites3,favourites4);
+     localStorage.setItem('Ticketbooking' , JSON.stringify(Ticketbooking));
+     showEntries();
+}
+
+function OrderFavourites(){
+
+  if("Ticketbooking" in localStorage){
+    Ticketbooking = JSON.parse(localStorage.getItem("Ticketbooking"));
+    showEntries();
   
 
+}
+}
 
-   
+function CheckLoyalty(){
 
-
-
+  }
 
