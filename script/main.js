@@ -34,7 +34,7 @@ const txtOutput5 = document.getElementById("output5");
 const txtOutput3 = document.getElementById("output3");
 
 ///
-
+const txtOutput6 = document.getElementById("output6");
 
 const btnAddOrder = document.getElementById("AddOrders");
 const btnPlaceOrder = document.getElementById("PlaceOrders");
@@ -1196,9 +1196,8 @@ function AddOrders(){
  
   txtOutput3.innerText=`${six} LKR`;
   
+
   
-
-
   document.getElementById("Day").value='';
   document.getElementById("Student").value='';
   document.getElementById("Foreigner").value='';
@@ -1220,7 +1219,8 @@ function AddOrders(){
   document.getElementById("output2").innerHTML="0.00";
   document.getElementById("output2t").innerHTML="0.00";
 
-  
+    
+  CheckLoyalty();
 
 } 
          
@@ -1251,6 +1251,7 @@ function donate(){
      
 }
 let Ticketbooking = [];
+let Loyalty = [];
 
 
 function showEntries(){
@@ -1260,22 +1261,27 @@ function showEntries(){
   txtOutput4.value = "";
   for (let i = 0; i < Ticketbooking.length; i++) {
    
-    //txtOutput +=Ticketbooking
+    
     txtOutputt1.value +=  Ticketbooking[i].Dnoadult + "\t"  + Ticketbooking[i].Dnochild +"\t"+Ticketbooking[i].Snoadult 
     + "\t"  + Ticketbooking[i].Snochild+"\t" + Ticketbooking[i].Fnoadult + "\t"  + Ticketbooking[i].Fnochild+ "\n";
     txtOut1puttt.value += Ticketbooking[i].Ddurations + "\t"+ Ticketbooking[i].Sdurations + "\t"+Ticketbooking[i].Fdurations + "\n";
     txtOutput4.value += Ticketbooking[i].noAP +"\t" + Ticketbooking[i].noFT+ "\n";
   }
+  for (let i = 0; i < Loyalty.length; i++) {
+    txtOutput6= Loyalty[i];
+    
+  }
 
 }
 
 function AddFavourites(){
+  document.getElementById("output").innerHTML="";
   document.getElementById("outputt1").innerHTML="";
-  const favourites0 = {
-   /* "Day":,
-    "Student":,
-    "Foreigner":*/
-  }
+  document.getElementById("out1puttt").innerHTML="";
+  document.getElementById("output4").innerHTML="";
+  document.getElementById("output2").innerHTML="0.00";
+  document.getElementById("output2t").innerHTML="0.00";
+
      const favourites1 = {
        "Dnoadult": txtDAdult.value,
        "Dnochild": txtDChild.value,
@@ -1297,8 +1303,10 @@ function AddFavourites(){
       "noAP":txtnoExtras1.value,
       "noFT":txtnoExtras2.value
      }
-     Ticketbooking.push(favourites0,favourites1,favourites2,favourites3,favourites4);
+    
+     Ticketbooking.push(favourites1,favourites2,favourites3,favourites4);
      localStorage.setItem('Ticketbooking' , JSON.stringify(Ticketbooking));
+    
      showEntries();
 }
 
@@ -1306,13 +1314,48 @@ function OrderFavourites(){
 
   if("Ticketbooking" in localStorage){
     Ticketbooking = JSON.parse(localStorage.getItem("Ticketbooking"));
-    showEntries();
-  
+   showEntries();
+   CurrentOrdersTickets();
+   CurrentOrdersNumber();
+   CurrentOrdersExtra();
+   ExtraOrders();
+   CurrentOrdersDuration();
 
+ 
+   
 }
 }
 
 function CheckLoyalty(){
 
+
+
+
+
+let totalnooforders = document.getElementById("Dnoadult").value*20 + document.getElementById("Dnochild").value*20
+                      +document.getElementById("Snoadult").value*20 + document.getElementById("Snochild").value*20
+                      +document.getElementById("Fnoadult").value*20 + document.getElementById("Fnochild").value*20
+                      +document.getElementById("noAP").value*20+document.getElementById("noFT").value*20;
+       if(totalnooforders > 60){
+          txtOutput6.innerText=`${totalnooforders} points`;
+      }
+      else{
+         txtOutput6.innerText=`${0} points`;
+      }
+
+      const loyaltypoints = {
+        "Dnoadult": txtDAdult.value*20,
+        "Dnochild": txtDChild.value*20,
+        "Snoadult": txtSAdult.value*20,
+        "Snochild": txtSChild.value*20,
+        "Fnoadult": txtFAdult.value*20,
+        "Fnochild": txtFChild.value*20,
+        "noAP":txtnoExtras1.value*20,
+        "noFT":txtnoExtras2.value*20
+       }
+    
+       Loyalty.push(loyaltypoints);
+       localStorage.setItem('Loyalty' , JSON.stringify(Loyalty));
+       showEntries();
   }
 
