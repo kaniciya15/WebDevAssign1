@@ -1176,7 +1176,7 @@ function ExtraOrders(){
 
 
 function AddOrders(){
-  CheckLoyalty();
+  
  let one=CurrentOrdersTickets();
  let two=CurrentOrdersNumber();
  let three=CurrentOrdersDuration();
