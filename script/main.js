@@ -1198,20 +1198,7 @@ function AddOrders(){
   
 
   
-  document.getElementById("Day").value='';
-  document.getElementById("Student").value='';
-  document.getElementById("Foreigner").value='';
- // document.getElementById("Dnoadult").value='';
-//  document.getElementById("Dnochild").value='';
-//  document.getElementById("Snoadult").value='';
-//  document.getElementById("Snochild").value='';
- // document.getElementById("Fnoadult").value='';
- // document.getElementById("Fnochild").value='';
-  document.getElementById("Ddurations").value='';
-  document.getElementById("Sdurations").value='';
-  document.getElementById("Fdurations").value='';
- // document.getElementById("noAP").value='';
- // document.getElementById("noFT").value='';
+ 
   document.getElementById("output").innerHTML="";
   document.getElementById("output4").innerHTML="";
   document.getElementById("outputt1").innerHTML="";
@@ -1228,13 +1215,26 @@ function PlaceOrders(){
 
   alert("THANK YOU!.  @mono.PTD.Ltd ");
 
- 
+  document.getElementById("Day").value='';
+  document.getElementById("Student").value='';
+  document.getElementById("Foreigner").value='';
+ document.getElementById("Dnoadult").value='';
+ document.getElementById("Dnochild").value='';
+ document.getElementById("Snoadult").value='';
+  document.getElementById("Snochild").value='';
+  document.getElementById("Fnoadult").value='';
+  document.getElementById("Fnochild").value='';
+  document.getElementById("Ddurations").value='';
+  document.getElementById("Sdurations").value='';
+  document.getElementById("Fdurations").value='';
+ document.getElementById("noAP").value='';
+  document.getElementById("noFT").value='';
   document.getElementById("output1").innerHTML="";
   document.getElementById("outputtt1").innerHTML="";
   document.getElementById("out1putttt").innerHTML="";
   document.getElementById("output5").innerHTML="";
   document.getElementById("output3").innerHTML="0.00";
- 
+  document.getElementById("output6").innerHTML="0";
 
 }
 
