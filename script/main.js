@@ -1336,7 +1336,7 @@ let totalnooforders = document.getElementById("Dnoadult").value*20 + document.ge
                       +document.getElementById("Fnoadult").value*20 + document.getElementById("Fnochild").value*20
                       +document.getElementById("noAP").value*20+document.getElementById("noFT").value*20;
        if(totalnooforders > 60){
-          txtOutput6.innerText=`${totalnooforders} points`;
+          txtOutput6.innerText=`You received ${totalnooforders} points`;
       }
       else{
          txtOutput6.innerText=`${0} points`;
